@@ -6,13 +6,13 @@ import { placeHolderHtml } from "./src/utils.js";
 const movieContainer = document.querySelector(".movie-container");
 const searchPage = document.querySelector(".search-page-container");
 const searchBtn = document.querySelector(".search-btn");
-const searchInput = document.querySelector(".input-search-bar");
+const searchInput = document.querySelector(".input");
 
 const moviesList = JSON.parse(localStorage.getItem("movies")) || [];
 
-movieContainer.style.display = "none";
-let movie = placeHolderHtml;
-searchPage.innerHTML = movie;
+// movieContainer.style.display = "none";
+// let movie = placeHolderHtml;
+// searchPage.innerHTML = movie;
 
 
 searchBtn.addEventListener("click", (e) => {
