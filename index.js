@@ -1,6 +1,7 @@
-import Movie from "./Movie";
-import { placeHolderHtml } from "./utils";
-import { getMovie } from "./api/getData";
+import { Movie } from "./src/Movie.js";
+import { getMovie } from "./src/api/getData.js";
+import { placeHolderHtml } from "./src/utils.js";
+
 
 const movieContainer = document.querySelector(".movie-container");
 const searchPage = document.querySelector(".search-page-container");
@@ -8,9 +9,11 @@ const searchBtn = document.querySelector(".search-btn");
 const searchInput = document.querySelector(".input-search-bar");
 
 const moviesList = JSON.parse(localStorage.getItem("movies")) || [];
+
 movieContainer.style.display = "none";
 let movie = placeHolderHtml;
 searchPage.innerHTML = movie;
+
 
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -27,3 +30,5 @@ searchBtn.addEventListener("click", (e) => {
   });
   searchInput.value = "";
 });
+
+

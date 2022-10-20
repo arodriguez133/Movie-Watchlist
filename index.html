@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Movie Watchlist</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/styles.css" />
     <script
@@ -16,25 +16,24 @@
         <header>
           <div class="header-group">
             <h1>Find Your Film</h1>
-            <h4><a href="watchlist.html">My Watchlist</a></h4>
+            <h4 class="watchlist"><a href="watchlist.html">My Watchlist</a></h4>
           </div>
         </header>
 
         <div class="search-bar">
           <input
             id="search"
-            class="input-search-bar"
+            class="input"
             type="text"
             name="search"
             placeholder="Search for a movie"
-          />
-          <button class="search-btn">Search</button>
+          /><button class="search-btn">Search</button>
         </div>
         <div class="search-page-container"></div>
         <div class="movie-container"></div>
       </div>
     </div>
 
-    <script src="src/index.js"></script>
+    <script src="/index.js" type="module"></script>
   </body>
 </html>
