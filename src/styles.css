@@ -192,8 +192,6 @@ html{
   font-family: "Inter", serif;
 }
 
-
- 
   .container{
     max-width: 100%;
     display: flex;
@@ -213,7 +211,7 @@ html{
       url(https://images.unsplash.com/photo-1628432136678-43ff9be34064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=963&q=80);
       background-position: top -100px right;
     width: 100%;
-    height: 300px;
+    height: 175px;
     color: #fff;
     margin: 0;
   }
@@ -223,15 +221,15 @@ html{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 30px;
   }
 
   .header-group h1{
-    font-size: 5em;
+    font-size: 2.2em;
+    margin-left: 10px;
   }
 
   .watchlist{
-    font-size: 1.4em;
+    font-size: .96em;
   }
 
   .watchlist a{
@@ -267,7 +265,7 @@ html{
   .search-btn {
       display: inline-block;
       padding: 10px 15px;
-      font-size: 20px;
+      font-size: 10px;
       border-radius: 0;
   }
 
@@ -278,11 +276,10 @@ html{
   .input{
     border: 1px solid lightgray;
     border-radius: 6px 0px 0 6px;
-    width: 80%;
+    width: 90%;
     outline: none;
-    padding: 15px;
+    padding: 10px;
     margin: 0;
-    
   }
   
   .search-btn {
@@ -291,7 +288,7 @@ html{
    background-color: #339dff;
    box-shadow: inset 0px .5px 1px #fff;
    color: #fff;
-   width: 150px;
+   width: 100px;
    cursor: pointer;
   }
 
@@ -314,4 +311,39 @@ html{
     color: #dfdddd;
     font-weight: 700;
     text-align: center;
+  }
+
+  .movie-container{
+    border: 1px solid red;
+    width: 100%;
+  }
+
+  .image-container{
+    width: 150px;
+    height: 230px;
+  }
+
+  .image-container img{
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .movie-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .title{
+    display: flex;
+  }
+
+  .title h4{
+    width: 100px;
+  }
+
+  .movie-content-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
   }
