@@ -10,9 +10,9 @@ const searchInput = document.querySelector(".input");
 
 const moviesList = JSON.parse(localStorage.getItem("movies")) || [];
 
-// movieContainer.style.display = "none";
-// let movie = placeHolderHtml;
-// searchPage.innerHTML = movie;
+movieContainer.style.display = "none";
+let movie = placeHolderHtml;
+searchPage.innerHTML = movie;
 
 
 searchBtn.addEventListener("click", (e) => {

@@ -316,11 +316,13 @@ html{
   .movie-container{
     border: 1px solid red;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .image-container{
-    width: 230px;
-    height: 160px;
+    width: 170px;
+    height: 260px;
   }
 
   .image-container img{
@@ -329,14 +331,10 @@ html{
     height: 100%;
   }
 
-  .movie-container{
-    display: flex;
-    align-items: center;
-  }
-
   .title{
     display: flex;
   }
+
 
   .title h4{
     width: 100px;
@@ -345,5 +343,27 @@ html{
   .movie-content-container{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    width: 60%;
+    max-height: 100%;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .movie-desc{
+    margin-top: 1em;
+  }
+
+  .movie-desc p{
+    font-size: .89rem;
+  }
+
+  .add-watchlist-btn{
+    border: none;
+    margin-top: 8px;
+    background-color: #051b0a;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
   }
