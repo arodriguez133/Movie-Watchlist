@@ -5578,10 +5578,12 @@ var movieContainer = document.querySelector(".movie-container");
 var searchPage = document.querySelector(".search-page-container");
 var searchBtn = document.querySelector(".search-btn");
 var searchInput = document.querySelector(".input");
+var moviesAdded = document.querySelector(".movies-added");
 var moviesList = JSON.parse(localStorage.getItem("movies")) || [];
 movieContainer.style.display = "none";
 var movie = _utils.placeHolderHtml;
 searchPage.innerHTML = movie;
+moviesAdded.innerHTML = localStorage.movies === undefined ? 0 : JSON.parse(localStorage.movies).length;
 searchBtn.addEventListener("click", function (e) {
   e.preventDefault();
   (0, _getData.getMovie)(searchInput.value).then(function (res) {
@@ -5591,10 +5593,10 @@ searchBtn.addEventListener("click", function (e) {
     movieContainer.innerHTML = movieInfo.renderMovie();
     var btn = document.querySelector(".add-watchlist-btn");
     btn.addEventListener("click", function () {
-      console.log("movie added!");
       movieInfo.addMovie(moviesList);
       var buttons = _gsap.gsap.utils.toArray(".add-watchlist-btn");
       var addedDiv = _gsap.gsap.utils.toArray(".added");
+      moviesAdded.innerHTML = JSON.parse(localStorage.movies).length;
       console.clear();
       console.log(movieContainer);
       buttons.forEach(function (btn, index) {
@@ -5604,10 +5606,9 @@ searchBtn.addEventListener("click", function (e) {
         }).to(addedDiv[index], {
           autoAlpha: 0,
           duration: .5
-        }, "+=.5").to(movieContainer, {
-          autoAlpha: 0
-        }, "<");
+        }, "+=.5");
       });
+      console.log(localStorage.length);
     });
   });
   searchInput.value = "";
