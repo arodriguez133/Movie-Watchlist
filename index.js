@@ -1,6 +1,11 @@
 import { Movie } from "./src/Movie.js";
 import { getMovie } from "./src/api/getData.js";
 import { placeHolderHtml } from "./src/utils.js";
+import { gsap } from "gsap";
+
+
+
+const tl = gsap.timeline();
 
 
 const movieContainer = document.querySelector(".movie-container");
@@ -26,6 +31,15 @@ searchBtn.addEventListener("click", (e) => {
     btn.addEventListener("click", () => {
       console.log("movie added!");
       movieInfo.addMovie(moviesList);
+      const buttons = gsap.utils.toArray(".add-watchlist-btn");
+      const addedDiv = gsap.utils.toArray(".added");
+      console.clear();
+      console.log(movieContainer);
+      buttons.forEach((btn, index) => {
+        tl.to(addedDiv[index], { autoAlpha: 1, duration: 0 })
+          .to(addedDiv[index], { autoAlpha: 0, duration: .5 }, "+=.5")
+          .to(movieContainer, { autoAlpha: 0 }, "<");
+      });
     });
   });
   searchInput.value = "";

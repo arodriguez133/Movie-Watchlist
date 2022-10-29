@@ -21,6 +21,9 @@ export class Movie {
       <div class="movie-desc">
         <p>${this.Plot}</p>
       </div>
+      <div class="added">
+      <h4>Added!</h4>
+      </div>
     </div>
   `;
   }
